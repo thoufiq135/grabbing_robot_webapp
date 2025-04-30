@@ -1,0 +1,2273 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: #E9F5BE;
+}
+.container-button1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "bt-1 bt-2 bt-3"
+    "bt-4 bt-5 bt-6";
+  position: fixed;
+  top:20vh;
+  left:45vw;
+
+  perspective: 800;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-button1:active {
+  transform: scale(0.95);
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.bt-1-1 {
+  grid-area: bt-1;
+}
+
+.bt-1-2 {
+  grid-area: bt-2;
+}
+
+.bt-1-3 {
+  grid-area: bt-3;
+}
+
+.bt-1-4 {
+  grid-area: bt-4;
+}
+
+.bt-1-5 {
+  grid-area: bt-5;
+}
+
+.bt-1-6 {
+  grid-area: bt-6;
+}
+
+.bt-1-1:hover ~ button {
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px -2px #18181888;
+}
+
+.bt-1-1:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.bt-1-3:hover ~ button {
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px -2px #18181888;
+}
+
+.bt-1-3:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.bt-1-4:hover ~ button {
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px 2px #18181888;
+}
+
+.bt-1-4:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.bt-1-6:hover ~ button {
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px 2px #18181888;
+}
+
+.bt-1-6:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.hover:hover ~ button::before {
+  background: transparent;
+}
+
+.hover:hover ~ #farward::after {
+  content: "Farward";
+  top: -150%;
+  transform: translate(-50%, 0);
+  font-size: 34px;
+  color: #f19c2b;
+}
+
+#farward {
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+#farward::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+#farward::after {
+  content: "Farward";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    left: 45%;
+  }
+
+  25% {
+    left: 54%;
+  }
+
+  50% {
+    left: 48%;
+  }
+
+  75% {
+    left: 52%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+.container-button2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "bt-1 bt-2 bt-3"
+    "bt-4 bt-5 bt-6";
+  position: fixed;
+  top:55vh;
+  left:45vw;
+
+  perspective: 800;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-button2:active {
+  transform: scale(0.95);
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.bt-2-1 {
+  grid-area: bt-1;
+}
+
+.bt-2-2 {
+  grid-area: bt-2;
+}
+
+.bt-2-3 {
+  grid-area: bt-3;
+}
+
+.bt-2-4 {
+  grid-area: bt-4;
+}
+
+.bt-2-5 {
+  grid-area: bt-5;
+}
+
+.bt-2-6 {
+  grid-area: bt-6;
+}
+
+.bt-2-1:hover ~ #backward {
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px -2px #18181888;
+}
+
+.bt-2-1:hover ~ #backward::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.bt-2-3:hover ~ #backward {
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px -2px #18181888;
+}
+
+.bt-2-3:hover ~ #backward::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.bt-2-4:hover ~ #backward {
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px 2px #18181888;
+}
+
+.bt-2-4:hover ~ #backward::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.bt-2-6:hover ~ #backward {
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px 2px #18181888;
+}
+
+.bt-2-6:hover ~ #backward::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.hover:hover ~ #backward::before {
+  background: transparent;
+}
+
+.hover:hover ~ #backward::after {
+  content: "Backward";
+  top: -150%;
+  transform: translate(-50%, 0);
+  font-size: 34px;
+  color: #f19c2b;
+}
+
+#backward {
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+#backward::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+#backward::after {
+  content: "Backward";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    left: 45%;
+  }
+
+  25% {
+    left: 54%;
+  }
+
+  50% {
+    left: 48%;
+  }
+
+  75% {
+    left: 52%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+.container-button3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "bt-1 bt-2 bt-3"
+    "bt-4 bt-5 bt-6";
+  position: fixed;
+  top:35vh;
+  left:30vw;
+
+  perspective: 800;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-button3:active {
+  transform: scale(0.95);
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.bt-3-1 {
+  grid-area: bt-1;
+}
+
+.bt-3-2 {
+  grid-area: bt-2;
+}
+
+.bt-3-3 {
+  grid-area: bt-3;
+}
+
+.bt-3-4 {
+  grid-area: bt-4;
+}
+
+.bt-3-5 {
+  grid-area: bt-5;
+}
+
+.bt-3-6 {
+  grid-area: bt-6;
+}
+
+.bt-3-1:hover ~ #left {
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px -2px #18181888;
+}
+
+.bt-3-1:hover ~ #left::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.bt-3-3:hover ~ #left {
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px -2px #18181888;
+}
+
+.bt-3-3:hover ~ #left::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.bt-3-4:hover ~ #left {
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px 2px #18181888;
+}
+
+.bt-3-4:hover ~ #left::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.bt-3-6:hover ~ #left {
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px 2px #18181888;
+}
+
+.bt-3-6:hover ~ #left::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.hover:hover ~ #left::before {
+  background: transparent;
+}
+
+.hover:hover ~ #left::after {
+  content: "Left";
+  top: -150%;
+  transform: translate(-50%, 0);
+  font-size: 34px;
+  color: #f19c2b;
+}
+
+#left {
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+#left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+#left::after {
+  content: "Left";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    left: 45%;
+  }
+
+  25% {
+    left: 54%;
+  }
+
+  50% {
+    left: 48%;
+  }
+
+  75% {
+    left: 52%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+.container-button4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "bt-1 bt-2 bt-3"
+    "bt-4 bt-5 bt-6";
+  position: fixed;
+  top:35vh;
+  left:60vw;
+
+  perspective: 800;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-button4:active {
+  transform: scale(0.95);
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.bt-4-1 {
+  grid-area: bt-1;
+}
+
+.bt-4-2 {
+  grid-area: bt-2;
+}
+
+.bt-4-3 {
+  grid-area: bt-3;
+}
+
+.bt-4-4 {
+  grid-area: bt-4;
+}
+
+.bt-4-5 {
+  grid-area: bt-5;
+}
+
+.bt-4-6 {
+  grid-area: bt-6;
+}
+
+.bt-4-1:hover ~ #right {
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px -2px #18181888;
+}
+
+.bt-4-1:hover ~ #right::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.bt-4-3:hover ~ #right {
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px -2px #18181888;
+}
+
+.bt-4-3:hover ~ #right::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.bt-4-4:hover ~ #right {
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px 2px #18181888;
+}
+
+.bt-4-4:hover ~ #right::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.bt-4-6:hover ~ #right {
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px 2px #18181888;
+}
+
+.bt-4-6:hover ~ #right::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.hover:hover ~ #right::before {
+  background: transparent;
+}
+
+.hover:hover ~ #right::after {
+  content: "Right";
+  top: -150%;
+  transform: translate(-50%, 0);
+  font-size: 34px;
+  color: #f19c2b;
+}
+
+#right{
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+#right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+#right::after {
+  content: "Right";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    left: 45%;
+  }
+
+  25% {
+    left: 54%;
+  }
+
+  50% {
+    left: 48%;
+  }
+
+  75% {
+    left: 52%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(
+      137.48deg,
+      #ffdb3b 10%,
+      #fe53bb 45%,
+      #8f51ea 67%,
+      #0044ff 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  position: fixed;
+  top:35vh;
+  left:42vw;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: "Avalors Personal Use";
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  border: double 4px #fe53bb;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #fe53bb;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+.btncha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(
+      137.48deg,
+      #ffdb3b 10%,
+      #fe53bb 45%,
+      #8f51ea 67%,
+      #0044ff 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  position: fixed;
+  top:10vh;
+  left:42vw;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: "Avalors Personal Use";
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btncha:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btncha:hover {
+  transform: scale(1.1);
+}
+
+.btncha:active {
+  border: double 4px #fe53bb;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btncha:active .circle {
+  background: #fe53bb;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+#axis1{
+  height:5vh;
+  width:50vw;
+  position: fixed;
+  top:30vh;
+  left:25vw
+}
+#l1{
+  position: fixed;
+  top:23vh;
+  left: 30vw;
+  font-size: 7vh;
+}
+#axis2{
+  height:5vh;
+  width:50vw;
+  position: fixed;
+  top:41vh;
+  left:25vw;
+}
+#l2{
+  position: fixed;
+  top:34vh;
+  left: 30vw;
+  font-size: 7vh;
+}
+#axis3{
+  height:5vh;
+  width:50vw;
+  position: fixed;
+  top:52vh;
+  left:25vw;
+}
+#l3{
+  position: fixed;
+  top:45vh;
+  left: 30vw;
+  font-size: 7vh;
+}
+#axis4{
+  height:5vh;
+  width:50vw;
+  position: fixed;
+  top:63vh;
+  left:25vw;
+}
+#l4{
+  position: fixed;
+  top:56vh;
+  left: 30vw;
+  font-size: 7vh;
+}
+#axis5{
+  height:5vh;
+  width:50vw;
+  position: fixed;
+  top:74vh;
+  left:25vw;
+}
+#l5{
+  position: fixed;
+  top:67vh;
+  left: 30vw;
+  font-size: 7vh;
+}
+#val1{
+  position: fixed;
+  left:43vw;
+  top:23vh
+}
+#val2{
+  position: fixed;
+  left:43vw;
+  top:34vh
+}
+#val3{
+  position: fixed;
+  left:43vw;
+  top:45vh
+}
+#val4{
+  position: fixed;
+  left:43vw;
+  top:56vh
+}
+#val5{
+  position: fixed;
+  left:43vw;
+  top:67vh
+}
+@media screen and (min-width:375px) and (max-width:700px){
+  .container-button1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "bt-1 bt-2 bt-3"
+      "bt-4 bt-5 bt-6";
+    position: fixed;
+    top:20vh;
+    left:1vw;
+  
+    perspective: 800;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .container-button1:active {
+    transform: scale(0.95);
+  }
+  
+  .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+  }
+  
+  .bt-1-1 {
+    grid-area: bt-1;
+  }
+  
+  .bt-1-2 {
+    grid-area: bt-2;
+  }
+  
+  .bt-1-3 {
+    grid-area: bt-3;
+  }
+  
+  .bt-1-4 {
+    grid-area: bt-4;
+  }
+  
+  .bt-1-5 {
+    grid-area: bt-5;
+  }
+  
+  .bt-1-6 {
+    grid-area: bt-6;
+  }
+  
+  .bt-1-1:hover ~ button {
+    transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-1-1:hover ~ button::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-1-3:hover ~ button {
+    transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-1-3:hover ~ button::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-1-4:hover ~ button {
+    transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-1-4:hover ~ button::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-1-6:hover ~ button {
+    transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px 2px #18181888;
+  }
+  
+  .bt-1-6:hover ~ button::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px 2px #18181888;
+  }
+  
+  .hover:hover ~ button::before {
+    background: transparent;
+  }
+  
+  .hover:hover ~ #farward::after {
+    content: "Farward";
+    top: -150%;
+    transform: translate(-50%, 0);
+    font-size: 34px;
+    color: #f19c2b;
+  }
+  
+  #farward {
+    position: absolute;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    background: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    border: 3px solid #f39923;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #farward::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: #f5ae51;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  #farward::after {
+    content: "Farward";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 47px;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  @keyframes shake {
+    0% {
+      left: 45%;
+    }
+  
+    25% {
+      left: 54%;
+    }
+  
+    50% {
+      left: 48%;
+    }
+  
+    75% {
+      left: 52%;
+    }
+  
+    100% {
+      left: 50%;
+    }
+  }
+  .container-button2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "bt-1 bt-2 bt-3"
+      "bt-4 bt-5 bt-6";
+    position: fixed;
+    top:20vh;
+    left:62vw;
+    perspective: 800;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .container-button2:active {
+    transform: scale(0.95);
+  }
+  
+  .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+  }
+  
+  .bt-2-1 {
+    grid-area: bt-1;
+  }
+  
+  .bt-2-2 {
+    grid-area: bt-2;
+  }
+  
+  .bt-2-3 {
+    grid-area: bt-3;
+  }
+  
+  .bt-2-4 {
+    grid-area: bt-4;
+  }
+  
+  .bt-2-5 {
+    grid-area: bt-5;
+  }
+  
+  .bt-2-6 {
+    grid-area: bt-6;
+  }
+  
+  .bt-2-1:hover ~ #backward {
+    transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-2-1:hover ~ #backward::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-2-3:hover ~ #backward {
+    transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-2-3:hover ~ #backward::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-2-4:hover ~ #backward {
+    transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-2-4:hover ~ #backward::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-2-6:hover ~ #backward {
+    transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px 2px #18181888;
+  }
+  
+  .bt-2-6:hover ~ #backward::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px 2px #18181888;
+  }
+  
+  .hover:hover ~ #backward::before {
+    background: transparent;
+  }
+  
+  .hover:hover ~ #backward::after {
+    content: "Backward";
+    top: -150%;
+    transform: translate(-50%, 0);
+    font-size: 34px;
+    color: #f19c2b;
+  }
+  
+  #backward {
+    position: absolute;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    background: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    border: 3px solid #f39923;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #backward::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: #f5ae51;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  #backward::after {
+    content: "Backward";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 47px;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  @keyframes shake {
+    0% {
+      left: 45%;
+    }
+  
+    25% {
+      left: 54%;
+    }
+  
+    50% {
+      left: 48%;
+    }
+  
+    75% {
+      left: 52%;
+    }
+  
+    100% {
+      left: 50%;
+    }
+  }
+  .container-button3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "bt-1 bt-2 bt-3"
+      "bt-4 bt-5 bt-6";
+    position: fixed;
+    top:35vh;
+    left:1vw;
+  
+    perspective: 800;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .container-button3:active {
+    transform: scale(0.95);
+  }
+  
+  .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+  }
+  
+  .bt-3-1 {
+    grid-area: bt-1;
+  }
+  
+  .bt-3-2 {
+    grid-area: bt-2;
+  }
+  
+  .bt-3-3 {
+    grid-area: bt-3;
+  }
+  
+  .bt-3-4 {
+    grid-area: bt-4;
+  }
+  
+  .bt-3-5 {
+    grid-area: bt-5;
+  }
+  
+  .bt-3-6 {
+    grid-area: bt-6;
+  }
+  
+  .bt-3-1:hover ~ #left {
+    transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-3-1:hover ~ #left::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-3-3:hover ~ #left {
+    transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-3-3:hover ~ #left::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-3-4:hover ~ #left {
+    transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-3-4:hover ~ #left::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-3-6:hover ~ #left {
+    transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px 2px #18181888;
+  }
+  
+  .bt-3-6:hover ~ #left::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px 2px #18181888;
+  }
+  
+  .hover:hover ~ #left::before {
+    background: transparent;
+  }
+  
+  .hover:hover ~ #left::after {
+    content: "Left";
+    top: -150%;
+    transform: translate(-50%, 0);
+    font-size: 34px;
+    color: #f19c2b;
+  }
+  
+  #left {
+    position: absolute;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    background: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    border: 3px solid #f39923;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: #f5ae51;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  #left::after {
+    content: "Left";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 47px;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  @keyframes shake {
+    0% {
+      left: 45%;
+    }
+  
+    25% {
+      left: 54%;
+    }
+  
+    50% {
+      left: 48%;
+    }
+  
+    75% {
+      left: 52%;
+    }
+  
+    100% {
+      left: 50%;
+    }
+  }
+  .container-button4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "bt-1 bt-2 bt-3"
+      "bt-4 bt-5 bt-6";
+    position: fixed;
+    top:35vh;
+    left:62vw;
+  
+    perspective: 800;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .container-button4:active {
+    transform: scale(0.95);
+  }
+  
+  .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+  }
+  
+  .bt-4-1 {
+    grid-area: bt-1;
+  }
+  
+  .bt-4-2 {
+    grid-area: bt-2;
+  }
+  
+  .bt-4-3 {
+    grid-area: bt-3;
+  }
+  
+  .bt-4-4 {
+    grid-area: bt-4;
+  }
+  
+  .bt-4-5 {
+    grid-area: bt-5;
+  }
+  
+  .bt-4-6 {
+    grid-area: bt-6;
+  }
+  
+  .bt-4-1:hover ~ #right {
+    transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-4-1:hover ~ #right::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px -2px #18181888;
+  }
+  
+  .bt-4-3:hover ~ #right {
+    transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-4-3:hover ~ #right::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px -2px #18181888;
+  }
+  
+  .bt-4-4:hover ~ #right {
+    transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+    box-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-4-4:hover ~ #right::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: -2px 2px #18181888;
+  }
+  
+  .bt-4-6:hover ~ #right {
+    transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+    box-shadow: 2px 2px #18181888;
+  }
+  
+  .bt-4-6:hover ~ #right::after {
+    animation: shake 0.5s ease-in-out 0.3s;
+    text-shadow: 2px 2px #18181888;
+  }
+  
+  .hover:hover ~ #right::before {
+    background: transparent;
+  }
+  
+  .hover:hover ~ #right::after {
+    content: "Right";
+    top: -150%;
+    transform: translate(-50%, 0);
+    font-size: 34px;
+    color: #f19c2b;
+  }
+  
+  #right{
+    position: absolute;
+    padding: 0;
+    width: 135px;
+    height: 47px;
+    background: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    border: 3px solid #f39923;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: #f5ae51;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  #right::after {
+    content: "Right";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 135px;
+    height: 47px;
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 47px;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  @keyframes shake {
+    0% {
+      left: 45%;
+    }
+  
+    25% {
+      left: 54%;
+    }
+  
+    50% {
+      left: 48%;
+    }
+  
+    75% {
+      left: 52%;
+    }
+  
+    100% {
+      left: 50%;
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    overflow: hidden;
+    height: 3rem;
+    background-size: 300% 300%;
+    cursor: pointer;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+    transition: 0.5s;
+    animation: gradient_301 5s ease infinite;
+    border: double 4px transparent;
+    background-image: linear-gradient(#212121, #212121),
+      linear-gradient(
+        137.48deg,
+        #ffdb3b 10%,
+        #fe53bb 45%,
+        #8f51ea 67%,
+        #0044ff 87%
+      );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    position: fixed;
+    top:50vh;
+    left:20vw;
+  }
+  
+  #container-stars {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+  }
+  
+  strong {
+    z-index: 2;
+    font-family: "Avalors Personal Use";
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-shadow: 0 0 4px white;
+  }
+  
+  #glow {
+    position: absolute;
+    display: flex;
+    width: 12rem;
+  }
+  
+  .circle {
+    width: 100%;
+    height: 30px;
+    filter: blur(2rem);
+    animation: pulse_3011 4s infinite;
+    z-index: -1;
+  }
+  
+  .circle:nth-of-type(1) {
+    background: rgba(254, 83, 186, 0.636);
+  }
+  
+  .circle:nth-of-type(2) {
+    background: rgba(142, 81, 234, 0.704);
+  }
+  
+  .btn:hover #container-stars {
+    z-index: 1;
+    background-color: #212121;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn:active {
+    border: double 4px #fe53bb;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: none;
+  }
+  
+  .btn:active .circle {
+    background: #fe53bb;
+  }
+  
+  #stars {
+    position: relative;
+    background: transparent;
+    width: 200rem;
+    height: 200rem;
+  }
+  
+  #stars::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: -100rem;
+    width: 100%;
+    height: 100%;
+    animation: animStarRotate 90s linear infinite;
+  }
+  
+  #stars::after {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+  }
+  
+  #stars::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 170%;
+    height: 500%;
+    animation: animStar 60s linear infinite;
+  }
+  
+  #stars::before {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+    opacity: 0.5;
+  }
+  
+  @keyframes animStar {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-135rem);
+    }
+  }
+  
+  @keyframes animStarRotate {
+    from {
+      transform: rotate(360deg);
+    }
+  
+    to {
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes gradient_301 {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes pulse_3011 {
+    0% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+  
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+  
+    100% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  .btncha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    overflow: hidden;
+    height: 3rem;
+    background-size: 300% 300%;
+    cursor: pointer;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+    transition: 0.5s;
+    animation: gradient_301 5s ease infinite;
+    border: double 4px transparent;
+    background-image: linear-gradient(#212121, #212121),
+      linear-gradient(
+        137.48deg,
+        #ffdb3b 10%,
+        #fe53bb 45%,
+        #8f51ea 67%,
+        #0044ff 87%
+      );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    position: fixed;
+    top:10vh;
+    left:24vw;
+  }
+  
+  #container-stars {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+  }
+  
+  strong {
+    z-index: 2;
+    font-family: "Avalors Personal Use";
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-shadow: 0 0 4px white;
+  }
+  
+  #glow {
+    position: absolute;
+    display: flex;
+    width: 12rem;
+  }
+  
+  .circle {
+    width: 100%;
+    height: 30px;
+    filter: blur(2rem);
+    animation: pulse_3011 4s infinite;
+    z-index: -1;
+  }
+  
+  .circle:nth-of-type(1) {
+    background: rgba(254, 83, 186, 0.636);
+  }
+  
+  .circle:nth-of-type(2) {
+    background: rgba(142, 81, 234, 0.704);
+  }
+  
+  .btncha:hover #container-stars {
+    z-index: 1;
+    background-color: #212121;
+  }
+  
+  .btncha:hover {
+    transform: scale(1.1);
+  }
+  
+  .btncha:active {
+    border: double 4px #fe53bb;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: none;
+  }
+  
+  .btncha:active .circle {
+    background: #fe53bb;
+  }
+  
+  #stars {
+    position: relative;
+    background: transparent;
+    width: 200rem;
+    height: 200rem;
+  }
+  
+  #stars::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: -100rem;
+    width: 100%;
+    height: 100%;
+    animation: animStarRotate 90s linear infinite;
+  }
+  
+  #stars::after {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+  }
+  
+  #stars::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 170%;
+    height: 500%;
+    animation: animStar 60s linear infinite;
+  }
+  
+  #stars::before {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+    opacity: 0.5;
+  }
+  
+  @keyframes animStar {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-135rem);
+    }
+  }
+  
+  @keyframes animStarRotate {
+    from {
+      transform: rotate(360deg);
+    }
+  
+    to {
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes gradient_301 {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes pulse_3011 {
+    0% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+  
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+  
+    100% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  #axis1{
+    height:5vh;
+    width:70vw;
+    position: fixed;
+    top:30vh;
+    left:15vw
+  }
+  #l1{
+    position: fixed;
+    top:23vh;
+    left: 15vw;
+    font-size: 5vh;
+  }
+  #axis2{
+    height:5vh;
+    width:70vw;
+    position: fixed;
+    top:41vh;
+    left:15vw;
+  }
+  #l2{
+    position: fixed;
+    top:34vh;
+    left: 15vw;
+    font-size: 5vh;
+  }
+  #axis3{
+    height:5vh;
+    width:70vw;
+    position: fixed;
+    top:52vh;
+    left:15vw;
+  }
+  #l3{
+    position: fixed;
+    top:45vh;
+    left: 15vw;
+    font-size: 5vh;
+  }
+  #axis4{
+    height:5vh;
+    width:70vw;
+    position: fixed;
+    top:63vh;
+    left:15vw;
+  }
+  #l4{
+    position: fixed;
+    top:56vh;
+    left: 15vw;
+    font-size: 5vh;
+  }
+  #axis5{
+    height:5vh;
+    width:70vw;
+    position: fixed;
+    top:74vh;
+    left:15vw;
+  }
+  #l5{
+    position: fixed;
+    top:67vh;
+    left: 15vw;
+    font-size: 5vh;
+  }
+  #val1{
+    position: fixed;
+    left:48vw;
+    top:23vh
+  }
+  #val2{
+    position: fixed;
+    left:48vw;
+    top:34vh
+  }
+  #val3{
+    position: fixed;
+    left:48vw;
+    top:45vh
+  }
+  #val4{
+    position: fixed;
+    left:48vw;
+    top:56vh
+  }
+  #val5{
+    position: fixed;
+    left:48vw;
+    top:67vh
+  }
+}
