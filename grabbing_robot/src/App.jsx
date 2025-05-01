@@ -12,6 +12,14 @@ function App() {
 function mode(){
 
   if(crane){
+    if(confirm("Do You Want Bring Hand to Default Pos?")){
+      normal()
+      setaxis1(90)
+      setaxis2(90)
+      setaxis3(90)
+      setaxis4(90)
+      setaxis5(90)
+    }
     setcrane(false);
 
   }else{
@@ -20,7 +28,7 @@ function mode(){
 
   }
 }
-// ---------------------------------------------------------------farward-----------------------------------------------------------
+// ---------------------------------------------------------------movements-----------------------------------------------------------
 function farward(){
   set(ref(db,"movements/forward"),true).then((e)=>{console.log("Moving Forward")}).catch((e)=>{console.log("error moving forward",e)})
   set(ref(db,"movements/backward"),false)
@@ -60,6 +68,34 @@ function stop(){
   set(ref(db,"movements/right"),false)
   set(ref(db,"movements/stop"),true).then((e)=>{console.log("Stop")}).catch((e)=>{console.log("error Stopping")})
 
+}
+// ------------------------------------------------------------------handcontrols----------------------------------------------------------
+function grabber(value){
+  setaxis1(value);
+  set(ref(db,"handcontrol/grabber"),value)
+}
+function elbo1(value){
+  setaxis2(value);
+  set(ref(db,"handcontrol/axis1"),value)
+}
+function elbo2(value){
+  setaxis3(value);
+  set(ref(db,"handcontrol/axis2"),value)
+}
+function elbo3(value){
+  setaxis4(value);
+  set(ref(db,"handcontrol/axis3"),value)
+}
+function hip(value){
+  setaxis5(value);
+  set(ref(db,"handcontrol/base"),value)
+}
+function normal(){
+  set(ref(db,"handcontrol/grabber"),90)
+  set(ref(db,"handcontrol/axis1"),90)
+  set(ref(db,"handcontrol/axis2"),90)
+  set(ref(db,"handcontrol/axis3"),90)
+  set(ref(db,"handcontrol/base"),90)
 }
   return (
     <>
@@ -164,15 +200,15 @@ function stop(){
 </button>
 {crane?<>
   <label id="l1"for="axis1">Grabber:{axis1!=null?<div id='val1'>{axis1}</div>:""}</label><br/>
-  <input id='axis1' type='range'value={axis1} max="155" onChange={(e)=>setaxis1(e.target.value)}></input><br/>
+  <input id='axis1' type='range'value={axis1} max="155" onChange={(e)=>grabber(e.target.value)}></input><br/>
   <label id="l2" for="axis2">axis3: {axis1!=null?<div id='val2'>{axis2}</div>:""}</label><br/>
-  <input id='axis2' type='range' value={axis2} max="155" onChange={(e)=>setaxis2(e.target.value)}></input><br/>
+  <input id='axis2' type='range' value={axis2} max="155" onChange={(e)=>elbo1(e.target.value)}></input><br/>
   <label id="l3" for="axis3">axis2:{axis1!=null?<div id='val3'>{axis3}</div>:""}</label> <br/>
-  <input id='axis3' type='range' value={axis3} max="155" onChange={(e)=>setaxis3(e.target.value)}></input><br/>
+  <input id='axis3' type='range' value={axis3} max="155" onChange={(e)=>elbo2(e.target.value)}></input><br/>
   <label id="l4" for="axis4">axis1:{axis1!=null?<div id='val4'>{axis4}</div>:""}</label> <br/>
-  <input id='axis4' type='range' value={axis4} max="155" onChange={(e)=>setaxis4(e.target.value)}></input><br/>
+  <input id='axis4' type='range' value={axis4} max="155" onChange={(e)=>elbo3(e.target.value)}></input><br/>
   <label id="l5" for="axis5">Base:{axis1!=null?<div id='val5'>{axis5}</div>:""}</label> <br/>
-  <input id='axis5' type='range' value={axis5} max="155" onChange={(e)=>setaxis5(e.target.value)}></input><br/>
+  <input id='axis5' type='range' value={axis5} max="155" onChange={(e)=>hip(e.target.value)}></input><br/>
   </>:""}
     </>
   )
