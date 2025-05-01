@@ -1138,6 +1138,68 @@ strong {
   left:43vw;
   top:67vh
 }
+
+#stop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  color: white;
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: solid 2px black;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: hsl(49deg 98% 60%);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position:fixed;
+  top:10vh;
+  left:20vw
+}
+
+#stop:active {
+  transform: scale(0.9);
+  transition: all 100ms ease;
+}
+
+#stop svg {
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.play {
+  transition: all 0.5s ease;
+  transition-delay: 300ms;
+}
+
+#stop:hover svg {
+  transform: scale(3) translate(50%);
+}
+
+.now {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+#stop:hover .now {
+  transform: translateX(10px);
+  transition-delay: 300ms;
+}
+
+#stop:hover .play {
+  transform: translateX(200%);
+  transition-delay: 300ms;
+}
+
 @media screen and (min-width:200px) and (max-width:1000px){
   .container-button1 {
     display: grid;
@@ -2247,7 +2309,7 @@ strong {
   }
   #val1{
     position: fixed;
-    left:48vw;
+    left:52vw;
     top:23vh
   }
   #val2{
@@ -2269,5 +2331,65 @@ strong {
     position: fixed;
     left:48vw;
     top:67vh
+  }
+  #stop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    color: white;
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    position:fixed;
+    top:10vh;
+    left:30vw
+  }
+  
+  #stop:active {
+    transform: scale(0.9);
+    transition: all 100ms ease;
+  }
+  
+  #stop svg {
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  
+  .play {
+    transition: all 0.5s ease;
+    transition-delay: 300ms;
+  }
+  
+  #stop:hover svg {
+    transform: scale(3) translate(50%);
+  }
+  
+  .now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  
+  #stop:hover .now {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+  }
+  
+  #stop:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
   }
 }
