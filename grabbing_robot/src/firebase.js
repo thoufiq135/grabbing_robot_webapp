@@ -1,7 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// Import the necessary Firebase modules
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
+import { getAuth, signInAnonymously } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,5 +16,21 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Get a reference to the Firebase Realtime Database
 const db = getDatabase(app);
-export  {db};
+
+// Initialize Firebase Authentication
+const auth = getAuth(app);
+
+// Sign in anonymously
+signInAnonymously(auth)
+  .then(() => {
+    console.log("Signed in anonymously");
+  })
+  .catch((error) => {
+    console.error("Error signing in anonymously:", error);
+  });
+
+// Export the database and auth reference for use in your app
+export { db, auth };
