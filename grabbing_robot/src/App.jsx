@@ -99,7 +99,7 @@ function normal(){
 }
   return (
     <>
-    {crane?"":<><div className="container-button1" onClick={farward}>
+    {crane?"":<><div className="container-button1" onMouseDown={farward} onMouseUp={stop}>
   <div className="hover bt-1-1"></div>
   <div className="hover bt-1-2"></div>
   <div className="hover bt-1-3"></div>
@@ -108,7 +108,7 @@ function normal(){
   <div className="hover bt-1-6"></div>
   <button id='farward' ></button>
 </div>
-<div className="container-button2" onClick={backward}>
+<div className="container-button2" onMouseDown={backward} onMouseUp={stop}>
   <div className="hover bt-2-1"></div>
   <div className="hover bt-2-2"></div>
   <div className="hover bt-2-3"></div>
@@ -119,7 +119,7 @@ function normal(){
 </div>
         
 
- <div className="container-button3" onClick={left}>
+ <div className="container-button3" onMouseDown={left} onMouseUp={stop}>
   <div className="hover bt-3-1"></div>
   <div className="hover bt-3-2"></div>
   <div className="hover bt-3-3"></div>
@@ -130,7 +130,7 @@ function normal(){
 </div>
     
 
-<div className="container-button4" onClick={right}>
+<div className="container-button4" onMouseDown={right} onMouseUp={stop}>
   <div className="hover bt-4-1"></div>
   <div className="hover bt-4-2"></div>
   <div className="hover bt-4-3"></div>
